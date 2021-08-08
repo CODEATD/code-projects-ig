@@ -1,0 +1,62 @@
+/*----------------
+Custom Properties
+------------------*/
+:root {
+  --color-white: #ffffff;
+  --color-grey: #eeeeee;
+  --color-blue: #0099ff;
+}
+
+html {
+  box-sizing: border-box; /*box model*/
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  text-decoration: none;
+}
+
+/*------------------
+Globla Vaiables
+--------------------*/
+body {
+  margin: 0;
+  font-family: system-ui,  sans-serif;
+  font-size: 1.6rem; /*1rem = 10px*/
+}
+h1 {
+  font-size: 5rem;
+  margin: 7rem 1.25rem 2.5rem 1.25rem;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 50;
+  margin: 0 1.25rem 5rem 1.25rem;
+}
+h1, p {
+  text-align: center;
+  color: var(--color-white);
+}
+
+/** Code Here **/
+.wave-container {
+  position: relative;
+  background: var(--color-blue);
+  overflow: hidden;
+}
+.wave-container svg {
+  display: block;
+  transform-origin: bottom;
+  animation: animateWave 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+@keyframes animateWave {
+  0% {
+    transform: scale(1,0);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
