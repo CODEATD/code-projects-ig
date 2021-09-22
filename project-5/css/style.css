@@ -1,0 +1,163 @@
+/*---------------
+Custom Properties
+----------------*/
+
+:root {
+  /*Fonts*/
+  --Font: "roboto", arial;
+  /*Colors*/
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --bg--white: rgb(255 255 255 / 95%);
+  /*Shadows*/
+  --box-shadow: 0 0 0 7px rgb(255 255 255 / 30%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--Font);
+  font-size: 1.6rem;
+  background-color: var(--color-white);
+}
+
+/** Globals **/
+
+.container {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
+
+* {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--FontHeading);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.8rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+/** Utilities **/
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.text-aling {
+  text-align: center;
+}
+
+/** Header **/
+.header {
+  background-image: url(../img/hero.jpg);
+  background-position: center -55px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 655px;
+}
+
+.bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 8rem;
+}
+
+.logo {
+  border: none;
+  width: 32rem;
+}
+
+.logo__description {
+  color: var(--color-white);
+  text-align: center;
+  line-height: 5rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.search-outer {
+  margin-top: 2rem;
+  position: relative;
+  width: 70rem;
+  height: 4.8rem;
+}
+
+@media (max-width: 738px) {
+  .search-outer {
+    width: 90%;
+  }
+}
+
+.field__input {
+  height: 4.6rem;
+  border: none;
+  width: 100%;
+  float: left;
+  background: var(--bg--white);
+  text-indent: 2rem;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.field__button {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgaGVpZ2h0PSIzMnB4IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6c2tldGNoPSJodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2gvbnMiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48dGl0bGUvPjxkZXNjLz48ZGVmcy8+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSI+PGcgZmlsbD0iIzkyOTI5MiIgaWQ9Imljb24tMTExLXNlYXJjaCI+PHBhdGggZD0iTTE5LjQyNzExNjQsMjEuNDI3MTE2NCBDMTguMDM3MjQ5NSwyMi40MTc0ODAzIDE2LjMzNjY1MjIsMjMgMTQuNSwyMyBDOS44MDU1NzkzOSwyMyA2LDE5LjE5NDQyMDYgNiwxNC41IEM2LDkuODA1NTc5MzkgOS44MDU1NzkzOSw2IDE0LjUsNiBDMTkuMTk0NDIwNiw2IDIzLDkuODA1NTc5MzkgMjMsMTQuNSBDMjMsMTYuMzM2NjUyMiAyMi40MTc0ODAzLDE4LjAzNzI0OTUgMjEuNDI3MTE2NCwxOS40MjcxMTY0IEwyNy4wMTE5MTc2LDI1LjAxMTkxNzYgQzI3LjU2MjExODYsMjUuNTYyMTE4NiAyNy41NTc1MzEzLDI2LjQ0MjQ2ODcgMjcuMDExNzE4NSwyNi45ODgyODE1IEwyNi45ODgyODE1LDI3LjAxMTcxODUgQzI2LjQ0Mzg2NDgsMjcuNTU2MTM1MiAyNS41NTc2MjA0LDI3LjU1NzYyMDQgMjUuMDExOTE3NiwyNy4wMTE5MTc2IEwxOS40MjcxMTY0LDIxLjQyNzExNjQgTDE5LjQyNzExNjQsMjEuNDI3MTE2NCBaIE0xNC41LDIxIEMxOC4wODk4NTExLDIxIDIxLDE4LjA4OTg1MTEgMjEsMTQuNSBDMjEsMTAuOTEwMTQ4OSAxOC4wODk4NTExLDggMTQuNSw4IEMxMC45MTAxNDg5LDggOCwxMC45MTAxNDg5IDgsMTQuNSBDOCwxOC4wODk4NTExIDEwLjkxMDE0ODksMjEgMTQuNSwyMSBMMTQuNSwyMSBaIiBpZD0ic2VhcmNoIi8+PC9nPjwvZz48L3N2Zz4=)
+    no-repeat center center;
+  border: none;
+  width: 4.8rem;
+  height: 4.8rem;
+  float: right;
+  margin-top: -4.8rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  background-size: 46%;
+}
+
+/** Clouds **/
+.clouds {
+  background-image: url(../img/clouds.png);
+  background-position: top center;
+  height: 38rem;
+  background-size: cover;
+  margin: -30rem 0 -19rem;
+}
